@@ -5,9 +5,6 @@
   box-sizing: border-box;
 }
 
-body {
-}
-
 header {
   height: 100vh;
   background-image: linear-gradient(to right, #434343 0%, black 100%);
@@ -27,6 +24,8 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+/***************************************************CLASS TAGS*****************************************************/
 
 .animation {
   height: 100vh;
@@ -75,6 +74,26 @@ footer {
   animation: text2 3s 1;
 }
 
+.aboutTitle {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  border-bottom: 4px solid black;
+}
+
+.myAbout {
+  font-size: 200%;
+  margin-top: 5%;
+}
+
+/* .aboutTitle {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+} */
+
 @keyframes text {
   0% {
     color: #cccfca;
@@ -96,6 +115,10 @@ footer {
 }
 
 @media screen and (max-width: 400px) {
+  .myAbout {
+    font-size: 100%;
+  }
+
   .text1 {
     font-size: 15px;
     font-weight: 300;
