@@ -60,6 +60,9 @@ header {
     #e9e9e7 100%
   );
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar {
@@ -67,12 +70,12 @@ header {
 }
 
 .chartContainer {
-  margin-left: auto;
+  margin-left: 20%;
   margin-right: auto;
-  /* display: flex;
+  display: flex;
   flex-direction: row;
   align-content: space-between;
-  align-items: top; */
+  align-items: center;
 }
 
 .profilePic {
@@ -81,19 +84,10 @@ header {
   margin-right: 20%;
   border-radius: 5px 10px 15px 20px;
   box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-  transition-property: background, border-radius;
-  transition-duration: 1s;
-  transition-timing-function: linear;
-}
-
-.profilePic:hover {
-  background: #ff7b29;
-  border-radius: 45%;
-  /* border-radius: 15px 20px 30px 30px; */
 }
 
 .scaleClass {
-  animation: scale 3s;
+  animation: scale 2s;
 }
 
 .animation {
@@ -143,9 +137,7 @@ header {
   animation: text2 3s 1;
 }
 
-.aboutTitle,
-.projectsTitle,
-.contactTitle {
+.aboutTitle {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
@@ -177,6 +169,12 @@ header {
 .aboutIcon {
   height: 100px;
 }
+/* .aboutTitle {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+} */
 
 .spinClass {
   height: 100px;
@@ -231,13 +229,6 @@ header {
   .paper-plane {
     display: none;
   }
-  .animation {
-    height: 100%;
-  }
-
-  #aboutPage {
-    height: 100%;
-  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -249,11 +240,7 @@ header {
     height: 100%;
   }
   .myAbout {
-    font-size: 150%;
-  }
-
-  .myProject {
-    font-size: 150%;
+    font-size: 100%;
   }
 
   .text1 {
@@ -290,72 +277,5 @@ header {
     position: absolute;
     top: 20%;
     left: 0%;
-  }
-}
-
-.myProject {
-  font-size: 200%;
-  margin-top: 5%;
-}
-
-.emailContainer {
-  background-color: white;
-}
-
-@media screen and (max-width: 1100px) {
-  .chartContainer {
-    margin-left: 0;
-    margin-right: auto;
-    /* display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    align-items: center; */
-  }
-
-  .profilePic {
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .aboutIcon {
-    height: 70px;
-  }
-
-  .myProject {
-    font-size: 150%;
-    margin-top: 10%;
-  }
-  .profileContainer {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .chartContainer {
-    margin-left: 0;
-    margin-right: auto;
-    /* display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    align-items: center; */
-  }
-
-  .profilePic {
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .aboutIcon {
-    height: 70px;
-  }
-
-  .myProject {
-    font-size: 150%;
-    margin-top: 10%;
-  }
-  .profileContainer {
-    text-align: center;
   }
 }
