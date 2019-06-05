@@ -14,7 +14,7 @@
     <title>Gsap Scroll</title>
   </head>
   <body>
-    <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
       <button
         class="navbar-toggler"
         type="button"
@@ -68,7 +68,7 @@
 
         <div class="container">
           <div class="row">
-            <div class="col-sm iconContainer">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 iconContainer">
               <img
                 class="aboutIcon"
                 src="./images/speed.png"
@@ -84,7 +84,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-sm iconContainer">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 iconContainer">
               <img
                 class="aboutIcon"
                 src="./images/responsive.png"
@@ -100,7 +100,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-sm iconContainer">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 iconContainer">
               <img
                 class="aboutIcon"
                 src="./images/imac.png"
@@ -115,7 +115,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-sm iconContainer">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 iconContainer">
               <img
                 class="aboutIcon"
                 src="./images/speedometer.png"
@@ -132,13 +132,35 @@
             </div>
           </div>
         </div>
+        <div>
+          <div class="chartContainer">
+            <div class="row">
+              <div class="col-sm-12 profileContainer">
+                <img
+                  src="./images/profilePic.jpg"
+                  class="profilePic"
+                  alt="profilePic"
+                />
+              </div>
+
+              <div
+                class="chart-container col-sm-12"
+                style="position: relative; height:40vh; width:80vw"
+              ></div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
     <div class="pageContainer projectsContainer" id="projects">
-      <h1>Projects here</h1>
+      <div class="projectsTitle">
+        <h1 class="myProject">PROJECTS</h1>
+      </div>
     </div>
     <div class="pageContainer emailContainer" id="contact">
-      <h1>Contact me here</h1>
+      <div class="contactTitle">
+        <h1 class="myContact">Contact</h1>
+      </div>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -156,6 +178,7 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
