@@ -1,43 +1,57 @@
-console.log(window.innerWidth);
+let aboutIcon = document.querySelectorAll(".aboutIcon")
+let profilePic = document.querySelector('.profilePic')
+let myChart = document.getElementById('myChart').getContext('2d');
+let massPopChart = new Chart(myChart, {
+  type: 'horizontalBar',
+  data: {
+    labels: ['HTML', 'CSS', 'JavaScript', 'React', 'MongoDB', 'Python'],
+    datasets: [{
+      label: 'languages',
+      data: [
+        93,
+        90,
+        80,
+        70,
+        70,
+        60,
+        0,
+        100
+      ],
+      backgroundColor: '#243139',
+      // backgroundColor: ['', '']
+      borderWidth: 2,
+      borderColor: '#999',
+      hoverBorderWidth: 3,
+      hoverBorderColor: 'black'
+    }]
+  },
+  options: {}
+
+})
+
+profilePic.addEventListener('mouseover', function () {
+  profilePic.classList.add('scaleClass')
+})
+
+profilePic.addEventListener('mouseout', function () {
+  profilePic.classList.remove('scaleClass')
+})
+
+aboutIcon.forEach(function (elem) {
+  elem.addEventListener("mouseover", function () {
+    elem.classList.add('spinClass')
+  });
+});
+
+aboutIcon.forEach(function (elem) {
+  elem.addEventListener("mouseout", function () {
+    elem.classList.remove('spinClass')
+  });
+});
+
 let flightPath = {};
-// GreenSock
-// if (window.innerWidth <= 500) {
-//   console.log("screen at 500 or less");
-//   flightPath = {
-//     curviness: 1.25,
-//     autoRotate: true,
-//     values: [
-//       { x: 50, y: -5 },
-//       { x: 80, y: 15 },
-//       { x: 100, y: 25 },
-//       { x: 150, y: 45 },
-//       { x: 200, y: -10 },
-//       { x: 100, y: 10 },
-//       { x: 400, y: -25 },
-//       { x: window.innerWidth, y: -50 }
-//     ]
-//   };
-// }
-
-// if (window.innerWidth <= 800) {
-//   console.log("screen at 800 or less");
-//   flightPath = {
-//     curviness: 1.25,
-//     autoRotate: true,
-//     values: [
-//       { x: 100, y: -10 },
-//       { x: 150, y: 5 },
-//       { x: 300, y: 25 },
-//       { x: 350, y: -25 },
-//       { x: 250, y: -25 },
-//       { x: 300, y: 25 },
-//       { x: 400, y: 0 },
-//       { x: window.innerWidth, y: -50 }
-//     ]
-//   };
-// }
-
-if (window.innerWidth >= 1000) {
+let iconPath = {};
+if (window.innerWidth >= 1100) {
   console.log("screen at 1300 or more");
   flightPath = {
     curviness: 1.25,
@@ -55,31 +69,31 @@ if (window.innerWidth >= 1000) {
   };
 }
 
-// @ts-ignore
-const tween = new TimelineLite();
-
-tween.add(
+if (window.innerWidth >= 1100) {
   // @ts-ignore
-  TweenLite.to(".paper-plane", 1, {
-    bezier: flightPath,
+  const tween = new TimelineLite();
+  tween.add(
     // @ts-ignore
-    ease: Power1.easeInOut
+    TweenLite.to(".paper-plane", 1, {
+      bezier: flightPath,
+      // @ts-ignore
+      ease: Power1.easeInOut
+    })
+  );
+
+
+  // @ts-ignore
+  const controller = new ScrollMagic.Controller();
+
+  // @ts-ignore
+  const scene = new ScrollMagic.Scene({
+    triggerElement: ".animation",
+    duration: 3000,
+    triggerHook: 0
   })
-);
-
-// @ts-ignore
-const controller = new ScrollMagic.Controller();
-
-// @ts-ignore
-const scene = new ScrollMagic.Scene({
-  triggerElement: ".animation",
-  duration: 3000,
-  triggerHook: 0
-})
-  .setTween(tween)
-  .setPin(".animation")
-  .addTo(controller);
-// @ts-ignore
-
-let aboutIcon = document.querySelector(".aboutIcon");
-TweenMax.to(aboutIcon, 2, { left: 600 });
+    .setTween(tween)
+    .setPin(".animation")
+    .addTo(controller);
+  // @ts-ignore
+  // TweenMax.to(aboutIcon, 2, { left: 600 });
+}

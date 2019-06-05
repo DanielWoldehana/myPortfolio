@@ -7,9 +7,47 @@
 
 header {
   height: 100vh;
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+  background: linear-gradient(230deg, #b6afaf, #161516, #646396, #ac586a);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 13s ease infinite;
+  -moz-animation: AnimationName 13s ease infinite;
+  animation: AnimationName 13s ease infinite;
 }
 
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 96%;
+  }
+  50% {
+    background-position: 100% 5%;
+  }
+  100% {
+    background-position: 0% 96%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 96%;
+  }
+  50% {
+    background-position: 100% 5%;
+  }
+  100% {
+    background-position: 0% 96%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 96%;
+  }
+  50% {
+    background-position: 100% 5%;
+  }
+  100% {
+    background-position: 0% 96%;
+  }
+}
 /***************************************************CLASS TAGS*****************************************************/
 
 .pageContainer {
@@ -25,6 +63,31 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.navbar {
+  background-color: red;
+}
+
+.chartContainer {
+  margin-left: 20%;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: center;
+}
+
+.profilePic {
+  height: 230px;
+  border-radius: 10px;
+  margin-right: 20%;
+  border-radius: 5px 10px 15px 20px;
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+}
+
+.scaleClass {
+  animation: scale 2s;
 }
 
 .animation {
@@ -64,7 +127,6 @@ header {
   font-weight: 700;
   letter-spacing: 6px;
   margin-bottom: 30px;
-  /* background: black; */
   position: relative;
   animation: text 3s 1;
 }
@@ -90,7 +152,7 @@ header {
 
 .iconContainer {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 15%;
   display: block;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -106,11 +168,6 @@ header {
 
 .aboutIcon {
   height: 100px;
-  transform: rotate(360deg);
-  animation-name: spin;
-  animation-duration: 4000ms;
-  /* animation-iteration-count: infinite;
-  animation-timing-function: linear; */
 }
 /* .aboutTitle {
   position: absolute;
@@ -119,12 +176,33 @@ header {
   text-align: center;
 } */
 
+.spinClass {
+  height: 100px;
+  animation-name: spin;
+  transform: rotate(0deg);
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes scale {
+  0% {
+    height: 230px;
+  }
+  50% {
+    height: 280px;
+  }
+}
+
 @keyframes spin {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
@@ -147,13 +225,20 @@ header {
     color: white;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   .paper-plane {
-    visibility: hidden;
+    display: none;
   }
 }
 
 @media screen and (max-width: 1000px) {
+  .animation {
+    height: 100%;
+  }
+
+  #aboutPage {
+    height: 100%;
+  }
   .myAbout {
     font-size: 100%;
   }
