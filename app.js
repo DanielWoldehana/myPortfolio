@@ -1,35 +1,5 @@
 let aboutIcon = document.querySelectorAll(".aboutIcon")
 let profilePic = document.querySelector('.profilePic')
-// let myChart = document.getElementById('myChart').getContext('2d');
-// let massPopChart = new Chart(myChart, {
-//   type: 'horizontalBar',
-//   data: {
-//     labels: ['HTML', 'CSS', 'JavaScript', 'React', 'MongoDB', 'Express', 'Python'],
-//     datasets: [{
-//       label: 'languages',
-//       data: [
-//         93,
-//         90,
-//         85,
-//         70,
-//         70,
-//         65,
-//         50,
-//         0,
-//         100
-//       ],
-//       // backgroundColor: '#243139',
-//       backgroundColor: ['rgba(68, 68, 68, 0.6)', 'rgba(0, 143, 199, 0.6)', 'rgba(83, 178, 143, 0.6)', 'rgba(255, 179, 15, 0.6)', 'rgba(255, 105, 5, 0.6)', 'rgb(245, 20, 0, 0.6)', 'rgba(171, 217, 102, 0.6)'],
-//       borderWidth: 2,
-//       borderColor: '#999',
-//       hoverBorderWidth: 3,
-//       hoverBorderColor: 'black'
-//     }]
-//   },
-//   options: {}
-
-// })
-
 let ctx = document.getElementById('myChart');
 
 Chart.defaults.global.animation.duration = 10000;

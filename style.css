@@ -15,6 +15,11 @@ header {
   animation: AnimationName 13s ease infinite;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 96%;
@@ -193,6 +198,7 @@ header {
 }
 
 .myProject {
+  display: inline-block;
   font-size: 200%;
   margin-top: 5%;
 }
@@ -225,6 +231,98 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
+.container1 {
+  display: inline-block;
+  margin-top: 150px;
+  width: 100vw;
+}
+
+.theContainer {
+  position: relative;
+  width: 250px;
+  height: 320px;
+}
+
+.proj1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+.proj1:hover {
+  transform: rotateY(180deg);
+}
+
+.theFront {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  color: #333;
+}
+
+.theFront img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.theBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  color: #333;
+  transform: rotateY(180deg);
+}
+
+.allProjects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.proj {
+  height: 280px;
+  width: 280px;
+  margin-top: 10px;
+  border-radius: 5px 10px 15px 20px;
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+  transition-property: background, border-radius;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+.hidden {
+  display: none;
+  height: 280px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  background-color: rgb(175, 170, 170);
+}
+
+.projName {
+  font-weight: 700;
+  font-size: 200%;
+}
+
+.projLang {
+  color: rgb(32, 104, 212);
+}
+
+.projButton {
+  border: 2px solid rgb(32, 104, 212);
+}
+
+.projButton:hover {
+  background-color: rgb(142, 176, 228);
+}
+
 @keyframes text {
   0% {
     color: #cccfca;
@@ -246,6 +344,21 @@ header {
 }
 
 @media screen and (max-width: 700px) {
+  .pageContainer {
+    height: 100%;
+  }
+
+  .proj {
+    height: 150px;
+    width: 150px;
+    margin-top: 10px;
+  }
+
+  .hidden {
+    height: 150px;
+    width: 150px;
+  }
+
   .aboutIcon {
     height: 70px;
   }
@@ -261,6 +374,16 @@ header {
 }
 
 @media screen and (max-width: 1000px) {
+  .proj {
+    height: 200px;
+    width: 200px;
+    margin-top: 10px;
+  }
+
+  .hidden {
+    height: 240px;
+    width: 240px;
+  }
   .statementContainer {
     margin-left: auto;
     margin-right: auto;
@@ -330,7 +453,23 @@ header {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .proj {
+    height: 250px;
+    width: 250px;
+    margin-top: 10px;
+  }
+
+  .hidden {
+    height: 250px;
+    width: 250px;
+  }
+}
 @media screen and (max-width: 1100px) {
+  .proj {
+    width: 200px;
+    height: 200px;
+  }
   .profilePic {
     height: 280px;
   }
