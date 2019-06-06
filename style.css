@@ -8,7 +8,7 @@
 header {
   height: 100vh;
   /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
-  background: linear-gradient(230deg, #b6afaf, #161516, #646396, #ac586a);
+  background: linear-gradient(230deg, #747272, #241524, #2d2d4e, #5c3039);
   background-size: 800% 800%;
   -webkit-animation: AnimationName 13s ease infinite;
   -moz-animation: AnimationName 13s ease infinite;
@@ -66,19 +66,10 @@ header {
   background-color: red;
 }
 
-.chartContainer {
+.profilePic {
+  height: 270px;
   margin-left: auto;
   margin-right: auto;
-  /* display: flex;
-  flex-direction: row;
-  align-content: space-between;
-  align-items: top; */
-}
-
-.profilePic {
-  height: 230px;
-  border-radius: 10px;
-  margin-right: 20%;
   border-radius: 5px 10px 15px 20px;
   box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
   transition-property: background, border-radius;
@@ -170,7 +161,9 @@ header {
   font-weight: 700;
   margin-top: 10%;
 }
-.iconContainer p {
+
+.iconContainer p,
+.brandStatement {
   color: rgba(119, 116, 116, 0.658);
 }
 
@@ -187,27 +180,51 @@ header {
   animation-timing-function: linear;
 }
 
-@keyframes scale {
-  0% {
-    height: 230px;
-  }
-  50% {
-    height: 280px;
-  }
+.canvasContainer {
+  width: 550px;
+  height: 300px;
+  margin: auto;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(30deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+.brandTitle {
+  color: rgba(54, 53, 53, 0.801);
+  font-weight: 700;
+  margin-top: 2%;
 }
 
+.myProject {
+  font-size: 200%;
+  margin-top: 5%;
+}
+
+.emailContainer {
+  background-color: white;
+}
+
+.aboutIcon {
+  height: 70px;
+}
+
+.myProject {
+  font-size: 150%;
+  margin-top: 10%;
+}
+
+.statementContainer {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profileContainer {
+  text-align: center;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
 @keyframes text {
   0% {
     color: #cccfca;
@@ -227,20 +244,40 @@ header {
     color: white;
   }
 }
-@media screen and (max-width: 1100px) {
-  .paper-plane {
-    display: none;
-  }
-  .animation {
-    height: 100%;
+
+@media screen and (max-width: 700px) {
+  .aboutIcon {
+    height: 70px;
   }
 
-  #aboutPage {
-    height: 100%;
+  .myProject {
+    font-size: 150%;
+    margin-top: 10%;
+  }
+  .canvasContainer {
+    width: 280px;
+    height: 200px;
   }
 }
 
 @media screen and (max-width: 1000px) {
+  .statementContainer {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .canvasContainer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .brandTitle {
+    font-size: 20px;
+    font-weight: 700;
+  }
   .animation {
     height: 100%;
   }
@@ -293,69 +330,18 @@ header {
   }
 }
 
-.myProject {
-  font-size: 200%;
-  margin-top: 5%;
-}
-
-.emailContainer {
-  background-color: white;
-}
-
 @media screen and (max-width: 1100px) {
-  .chartContainer {
-    margin-left: 0;
-    margin-right: auto;
-    /* display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    align-items: center; */
-  }
-
   .profilePic {
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 280px;
+  }
+  .paper-plane {
+    display: none;
+  }
+  .animation {
+    height: 100%;
   }
 
-  .aboutIcon {
-    height: 70px;
-  }
-
-  .myProject {
-    font-size: 150%;
-    margin-top: 10%;
-  }
-  .profileContainer {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .chartContainer {
-    margin-left: 0;
-    margin-right: auto;
-    /* display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    align-items: center; */
-  }
-
-  .profilePic {
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .aboutIcon {
-    height: 70px;
-  }
-
-  .myProject {
-    font-size: 150%;
-    margin-top: 10%;
-  }
-  .profileContainer {
-    text-align: center;
+  #aboutPage {
+    height: 100%;
   }
 }

@@ -30,6 +30,41 @@ let profilePic = document.querySelector('.profilePic')
 
 // })
 
+let ctx = document.getElementById('myChart');
+
+Chart.defaults.global.animation.duration = 10000;
+
+
+// @ts-ignore
+let myChart = new Chart(ctx, {
+  type: 'horizontalBar',
+  data: {
+    labels: ['HTML', 'CSS', 'JavaScript', 'React', 'MongoDB', 'Express', 'Python'],
+    datasets: [{
+      label: 'languages',
+      data: [
+        93,
+        90,
+        85,
+        70,
+        70,
+        65,
+        50,
+        0,
+        100
+      ],
+      // backgroundColor: '#243139',
+      backgroundColor: ['rgba(68, 68, 68, 0.6)', 'rgba(0, 143, 199, 0.6)', 'rgba(83, 178, 143, 0.6)', 'rgba(255, 179, 15, 0.6)', 'rgba(255, 105, 5, 0.6)', 'rgb(245, 20, 0, 0.6)', 'rgba(171, 217, 102, 0.6)'],
+      borderWidth: 2,
+      borderColor: '#999',
+      hoverBorderWidth: 3,
+      hoverBorderColor: 'black'
+    }]
+  },
+  options: {}
+
+})
+
 profilePic.addEventListener('mouseover', function () {
   profilePic.classList.add('scaleClass')
 })
@@ -68,9 +103,7 @@ if (window.innerWidth >= 1100) {
       { x: window.innerWidth, y: -100 }
     ]
   };
-}
 
-if (window.innerWidth >= 1100) {
   // @ts-ignore
   const tween = new TimelineLite();
   tween.add(
