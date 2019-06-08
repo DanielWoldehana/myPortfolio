@@ -468,6 +468,10 @@ footer p {
 }
 
 @media screen and (max-width: 1000px) {
+  .paper-plane {
+    display: none;
+  }
+
   .contactTitle {
     left: 45%;
   }
