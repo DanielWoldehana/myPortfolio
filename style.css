@@ -10,17 +10,31 @@ header {
   /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
   background: linear-gradient(230deg, #747272, #241524, #2d2d4e, #5c3039);
   background-size: 800% 800%;
-  -webkit-animation: AnimationName 13s ease infinite;
-  -moz-animation: AnimationName 13s ease infinite;
-  animation: AnimationName 13s ease infinite;
+  -webkit-animation: AnimationColor 13s ease infinite;
+  -moz-animation: AnimationColor 13s ease infinite;
+  animation: AnimationColor 13s ease infinite;
 }
 
 a {
   text-decoration: none;
   color: black;
 }
+label,
+input,
+textarea {
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+}
 
-@-webkit-keyframes AnimationName {
+form {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 60px;
+  box-shadow: 5px 5px 5px 5px rgba(68, 68, 68, 0.6);
+}
+
+@-webkit-keyframes AnimationColor {
   0% {
     background-position: 0% 96%;
   }
@@ -31,7 +45,7 @@ a {
     background-position: 0% 96%;
   }
 }
-@-moz-keyframes AnimationName {
+@-moz-keyframes AnimationColor {
   0% {
     background-position: 0% 96%;
   }
@@ -42,7 +56,7 @@ a {
     background-position: 0% 96%;
   }
 }
-@keyframes AnimationName {
+@keyframes AnimationColor {
   0% {
     background-position: 0% 96%;
   }
@@ -54,6 +68,10 @@ a {
   }
 }
 /***************************************************CLASS TAGS*****************************************************/
+
+.logo {
+  height: 60px;
+}
 
 .pageContainer {
   background-image: linear-gradient(
@@ -140,10 +158,17 @@ a {
 }
 
 .aboutTitle,
-.projectsTitle,
-.contactTitle {
+.projectsTitle {
   position: absolute;
   left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  border-bottom: 4px solid black;
+}
+
+.contactTitle {
+  position: absolute;
+  left: 47%;
   transform: translate(-50%);
   text-align: center;
   border-bottom: 4px solid black;
@@ -204,7 +229,7 @@ a {
 }
 
 .emailContainer {
-  background-color: white;
+  height: 100vh;
 }
 
 .aboutIcon {
@@ -277,6 +302,11 @@ a {
   backface-visibility: hidden;
   color: #333;
   transform: rotateY(180deg);
+  background: linear-gradient(230deg, #f0d0d0, #685568, #8e8eaf, #88cc86);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationColor 13s ease infinite;
+  -moz-animation: AnimationColor 13s ease infinite;
+  animation: AnimationColor 13s ease infinite;
 }
 
 .allProjects {
@@ -303,7 +333,6 @@ a {
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  background-color: rgb(175, 170, 170);
 }
 
 .projName {
@@ -323,6 +352,52 @@ a {
   background-color: rgb(142, 176, 228);
 }
 
+.contactTitle {
+  margin: 40px;
+  display: block;
+}
+
+.contactForm {
+  width: 500px;
+  position: relative;
+  top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(230deg, #f0d0d0, #685568, #8e8eaf, #88cc86);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationColor 13s ease infinite;
+  -moz-animation: AnimationColor 13s ease infinite;
+  animation: AnimationColor 13s ease infinite;
+}
+
+.submit {
+  width: 100%;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background-color: #747272;
+}
+footer p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.myIcons {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.myIcons img {
+  height: 40px;
+  margin: 0 10px;
+}
 @keyframes text {
   0% {
     color: #cccfca;
@@ -344,8 +419,27 @@ a {
 }
 
 @media screen and (max-width: 700px) {
+  .contactForm {
+    padding: 0;
+    width: 300px;
+  }
+  form {
+    padding: 15px;
+  }
+  .proj {
+    left: 10%;
+  }
+
   .pageContainer {
     height: 100%;
+  }
+
+  .contactTitle {
+    left: 40%;
+  }
+
+  .emailContainer {
+    height: 100vh;
   }
 
   .proj {
@@ -374,10 +468,15 @@ a {
 }
 
 @media screen and (max-width: 1000px) {
+  .contactTitle {
+    left: 45%;
+  }
+
   .proj {
     height: 200px;
     width: 200px;
     margin-top: 10px;
+    left: 10%;
   }
 
   .hidden {
@@ -454,33 +553,19 @@ a {
 }
 
 @media screen and (max-width: 1200px) {
+  .contactTitle {
+    left: 45%;
+  }
+
   .proj {
     height: 250px;
     width: 250px;
     margin-top: 10px;
+    left: 10%;
   }
 
   .hidden {
     height: 250px;
     width: 250px;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .proj {
-    width: 200px;
-    height: 200px;
-  }
-  .profilePic {
-    height: 280px;
-  }
-  .paper-plane {
-    display: none;
-  }
-  .animation {
-    height: 100%;
-  }
-
-  #aboutPage {
-    height: 100%;
   }
 }
