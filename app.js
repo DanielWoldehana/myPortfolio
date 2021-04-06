@@ -2,10 +2,10 @@ let aboutIcon = document.querySelectorAll(".aboutIcon");
 let profilePic = document.querySelector(".profilePic");
 let ctx = document.getElementById("myChart");
 
-Chart.defaults.global.animation.duration = 10000;
+Chart.defaults.global.animation.duration = 11900;
 
 let mySubmit = document.querySelector(".submit");
-mySubmit.addEventListener("click", function(evt) {
+mySubmit.addEventListener("click", function (evt) {
   console.log("clicked");
   let email = document.querySelector(".email").value;
   let subject = document.querySelector(".subject").value;
@@ -48,7 +48,7 @@ let myChart = new Chart(ctx, {
       "React",
       "MongoDB",
       "Express",
-      "Python"
+      "Python",
     ],
     datasets: [
       {
@@ -62,34 +62,34 @@ let myChart = new Chart(ctx, {
           "rgba(255, 179, 15, 0.6)",
           "rgba(255, 105, 5, 0.6)",
           "rgb(245, 20, 0, 0.6)",
-          "rgba(171, 217, 102, 0.6)"
+          "rgba(171, 217, 102, 0.6)",
         ],
         borderWidth: 2,
         borderColor: "#999",
         hoverBorderWidth: 3,
-        hoverBorderColor: "black"
-      }
-    ]
+        hoverBorderColor: "black",
+      },
+    ],
   },
-  options: {}
+  options: {},
 });
 
-profilePic.addEventListener("mouseover", function() {
+profilePic.addEventListener("mouseover", function () {
   profilePic.classList.add("scaleClass");
 });
 
-profilePic.addEventListener("mouseout", function() {
+profilePic.addEventListener("mouseout", function () {
   profilePic.classList.remove("scaleClass");
 });
 
-aboutIcon.forEach(function(elem) {
-  elem.addEventListener("mouseover", function() {
+aboutIcon.forEach(function (elem) {
+  elem.addEventListener("mouseover", function () {
     elem.classList.add("spinClass");
   });
 });
 
-aboutIcon.forEach(function(elem) {
-  elem.addEventListener("mouseout", function() {
+aboutIcon.forEach(function (elem) {
+  elem.addEventListener("mouseout", function () {
     elem.classList.remove("spinClass");
   });
 });
@@ -109,8 +109,8 @@ if (window.innerWidth >= 1100) {
       { x: 550, y: -50 },
       { x: 600, y: 50 },
       { x: 800, y: 0 },
-      { x: window.innerWidth, y: -100 }
-    ]
+      { x: window.innerWidth, y: -100 },
+    ],
   };
 
   // @ts-ignore
@@ -120,7 +120,7 @@ if (window.innerWidth >= 1100) {
     TweenLite.to(".paper-plane", 1, {
       bezier: flightPath,
       // @ts-ignore
-      ease: Power1.easeInOut
+      ease: Power1.easeInOut,
     })
   );
 
@@ -131,7 +131,7 @@ if (window.innerWidth >= 1100) {
   const scene = new ScrollMagic.Scene({
     triggerElement: ".animation",
     duration: 1000,
-    triggerHook: 0
+    triggerHook: 0,
   })
     .setTween(tween)
     .setPin(".animation")

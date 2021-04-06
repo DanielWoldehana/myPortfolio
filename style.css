@@ -83,6 +83,7 @@ form {
     #e9e9e7 100%
   );
   height: 100vh;
+  width: 100%;
 }
 
 .navbar {
@@ -309,6 +310,7 @@ form {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  object-fit: fill;
 }
 
 .proj {
@@ -343,11 +345,25 @@ form {
 }
 
 .projButton {
-  border: 2px solid rgb(32, 104, 212);
+  /* text-decoration: none;
+  margin: auto;
+  width: 50%;
+  border: 2px solid rgb(32, 104, 212); */
+  background: #91b6ec;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  font-weight: bolder;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
 }
 
 .projButton:hover {
-  background-color: rgb(142, 176, 228);
+  box-shadow: 4px 4px #747272;
+  text-decoration: none;
+  background-color: #c3d7f5;
 }
 
 .contactTitle {
@@ -396,6 +412,11 @@ footer p {
   height: 40px;
   margin: 0 10px;
 }
+
+.project__name {
+  text-align: center;
+}
+
 @keyframes text {
   0% {
     color: #cccfca;
@@ -429,7 +450,7 @@ footer p {
   }
 
   .pageContainer {
-    height: 100%;
+    height: 100vh;
   }
 
   .contactTitle {
